@@ -28,11 +28,10 @@ ActiveRecord::Schema.define(version: 2020_02_14_203849) do
   create_table "participants", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "event_id", null: false
-    t.bigint "role_id", null: false
+    t.integer "role", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["event_id"], name: "index_participants_on_event_id"
-    t.index ["role_id"], name: "index_participants_on_role_id"
     t.index ["user_id"], name: "index_participants_on_user_id"
   end
 
@@ -42,12 +41,6 @@ ActiveRecord::Schema.define(version: 2020_02_14_203849) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["event_id"], name: "index_pictures_on_event_id"
-  end
-
-  create_table "roles", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|

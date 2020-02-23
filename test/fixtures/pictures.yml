@@ -1,9 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  event: one
+picture_one:
+  event: goSnowboarding
   picture: MyString
 
-two:
-  event: two
+picture_two:
+  event: goSleeping
+  picture: MyString
+
+picture_three:
+  event: goSnowboarding
+  picture: MyString
+
+picture_four:
+  event: goSleeping
   picture: MyString

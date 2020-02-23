@@ -7,8 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-['Organizer', 'Co-Organizer', 'Audience', 'Visitor'].each { |name| Role.create(name: name) }
-
 100.times do 
     name = Faker::Name.name
     User.create(
@@ -27,11 +25,10 @@ require 'faker'
 end
 users = User.all
 events = Event.all
-roles = Role.all
 users.each do |user|
     Participant.create(
         user_id: user.id,
-        role_id: roles.sample(1).first.id,
-        event_id: roles.sample(1).first.id
+        role: rand(4),
+        event_id: events.sample(1).first.id
     )
 end

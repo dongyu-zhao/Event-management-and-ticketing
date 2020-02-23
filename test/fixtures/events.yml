@@ -1,17 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
+goSnowboarding:
+  title: snowboard
   price: 1.5
-  scale: 
   time: 2020-02-14
-  place: MyString
-  description: MyText
+  place: WM
+  description: Have a good ride
 
-two:
-  title: MyString
+goSleeping:
+  title: sleep
   price: 1.5
-  scale: 
   time: 2020-02-14
-  place: MyString
-  description: MyText
+  place: Longview
+  description: zzzzzz
